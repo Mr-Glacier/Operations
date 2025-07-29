@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# 获取当前脚本所在目录
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # 创建日志目录
-LOG_DIR="/${pwd}/operations_script/docker_info_log"
+LOG_DIR="$SCRIPT_DIR/docker_info_log"
 mkdir -p "$LOG_DIR"
 
 # 时间戳
